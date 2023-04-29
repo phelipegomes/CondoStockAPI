@@ -19,7 +19,7 @@ class Database:
         self.url = url
         self.database = database
 
-db = Database("mysql+pymysql", "you_user", "your_password", "127.0.0.1:3306", "your_dbname")
+db = Database("mysql+pymysql", "YOUR_USER", "YOUR_PASSWORD", "127.0.0.1:3306", "inventorydb")
 param = f'{db.model}://{db.user}:{db.password}@{db.url}/{db.database}'
 
 engine = create_engine(param)
