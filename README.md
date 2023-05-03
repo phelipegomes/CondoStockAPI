@@ -1,5 +1,3 @@
-# CondoStockAPI - REST API padrão MVC usando FastAPI
-
 # Índice
 
 * [Descrição do Projeto](#descricao-do-projeto)
