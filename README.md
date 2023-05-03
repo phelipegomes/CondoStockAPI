@@ -103,7 +103,13 @@ mysql --version
 Com a instalação concluída, execute o script deste repositorio no banco de dados para criar o banco de dados e sua tabela de produtos. Script link.
 
 # Instalação da aplicação
-Instale os pacotes necessários: Instale os pacotes com o comando abaixo.
+
+(Opcional) Instale os pacotes necessários pelo requirements.txt: Basta executar o seguinte comando na raíz da aplicação:
+```
+pip install -r requirements.txt
+```
+
+Instale os pacotes necessários manualmente: Instale os pacotes com o comando abaixo.
 ```
 pip install fastapi sqlalchemy pymysql uvicorn 
 ```
