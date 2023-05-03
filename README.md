@@ -171,7 +171,7 @@ CREATE TABLE products(
 );
 ```
 
-Altere o nome da base de dados no arquivo db.py:
+Altere o nome para 'tests' no campo base de dados que esta no arquivo db.py:
 ```
 db = Database("mysql+pymysql", "YOUR_USER", "YOUR_PASSWORD", "127.0.0.1:3306", "tests")
 ```
