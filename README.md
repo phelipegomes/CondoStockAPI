@@ -4,6 +4,7 @@
 * [Rotas Disponíveis](#rotas-disponiveis)
 * [Instalação do projeto](#instalacao-do-projeto)
 * [Instalação da aplicação](#instalacao-da-aplicacao)
+* [Testes])#(testes)
 * [Conclusão](#conclusao)
 
 # Descrição do Projeto
@@ -146,8 +147,40 @@ uvicorn app:app --reload
 
 Teste a API: Agora a API está pronta para ser testada. Abra o navegador e acesse o endereço http://localhost:8000/docs para abrir a documentação gerada automaticamente pelo FastAPI. Você pode testar os endpoints diretamente na documentação ou usando um software como o Postman.
 
+# Testes
+
+Para realizar testes nas rotas, instale o package conforme o comando abaixo:
+```
+pip install pytest
+```
+
+Crie um banco de dados novo com o nome 'tests' e execute o seguinte script:
+
+```
+CREATE TABLE products(
+  id INT NOTE NULL AUTO_INCREMENT, 
+  name VARCHAR(255), 
+  description VARCHAR(255), 
+  price VARCHAR(255), 
+  quantity VARCHAR(255), 
+  color VARCHAR(255), 
+  serial VARCHAR(255), 
+  PRIMARY KEY (id)
+);
+```
+
+Altere o nome da base de dados no arquivo db.py:
+```
+db = Database("mysql+pymysql", "YOUR_USER", "YOUR_PASSWORD", "127.0.0.1:3306", "tests")
+```
+
+Execute o arquivo de testes com o comando:
+```
+pytest
+```
+
 # Conclusão
 
 CondoStockAPI é uma REST API desenvolvida com FastAPI, que usa a classe de rotas para criar endpoints. O banco de dados é gerenciado por PyMySQL e sqlalchemy. A API é configurada para controlar os produtos por meio do endpoint /products, que oferece rotas para incluir, buscar, atualizar e excluir produtos. 
 
-O projeto está em desenvolvimento e, em breve, haverá um pallet de testes e autenticação com token JWT. O MySQL é o banco de dados recomendado e um script é fornecido para criar o banco de dados e sua tabela de produtos. Para instalar a aplicação, é necessário instalar o Anaconda e criar um ambiente virtual.
+O projeto está em desenvolvimento e, em breve, será implementado a autenticação com token JWT. O MySQL é o banco de dados recomendado e um script é fornecido para criar o banco de dados e sua tabela de produtos. Para instalar a aplicação, é necessário instalar o Anaconda e criar um ambiente virtual.
