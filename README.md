@@ -1,4 +1,4 @@
-# CondoStock app: Use guide
+# CondoStock API: Use guide
 
 # Índice
 
