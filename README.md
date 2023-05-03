@@ -1,14 +1,15 @@
 CondoStockAPI - REST API padrão MVC usando FastAPI
 
-Índice
+#Índice
 
-Descrição do Projeto
-Rotas Disponíveis
-Instalação do projeto
-Instalação da aplicação
-Tecnologias utilizadas
-Conclusão
-Descrição do projeto
+* [Descrição do Projeto] (descricao-do-projeto)
+* [Rotas Disponíveis] (rotas-disponiveis)
+* [Instalação do projeto] (instalacao-do-projeto)
+* [Instalação da aplicação] (instalacao-da-aplicacao)
+* [Conclusão] (conclusao)
+
+
+#Descrição do projeto
 
 Esta aplicação trata-se de uma API desenvolvida utilizando o framework FastAPI, onde é importado funcionalidades que agilizam o processo de criação de ending-points usando a classe de rotas.
 
@@ -16,15 +17,17 @@ As querys são controladas pela biblioteca do python mysqlAlquemy e pyMySQL, aux
 
 O servidor da aplicação utiliza o package uviCorn para criar ambiente virtual e executar a aplicaçao local e Anaconda para um deploy rápido da aplicação.
 
-Rotas disponíveis
+#Rotas disponíveis
 
 Aplicação configurada com rotas para a realização controle de produtos usando o ending-point /products:
 
+```
 POST: -> /products/: Inclui um novo produto com ID sequencial; 
 GET/id -> /products/id: Busca um objeto a partir de um ID válido; 
 GET/ -> /products: Mostra todos os produtos cadastrados; 
 PUT/id -> products/id: Atualiza um objeto a partir de um ID válido; 
 DELETE/id -> /products/id: Deleta um objeto a partir de um ID existente.
+```
 
 OBS: As rotas PUT e DELETE possuem previamente um validador de ID nulo.
 
@@ -50,37 +53,43 @@ Em andamento:
 --> Pallet de testes ainda em desenvolvimento 
 --> Auth com token JWT
 
-Instalação do projeto
+#Instalação do projeto
 
 Para que a API funcione, siga os passos abaixo. Lembre-se: é necessário possuir o banco de dados mysql e executar o script em anexo para que as configuraçoes já definidas sejam lidas da forma correta. Caso contrário, siga o passo a passo de instalação do mySQL.
 
-Windows
+##Windows
 
-Faça o download do instalador: Acesse o site oficial do MySQL e faça o download do instalador para Windows. Installation for Windows.
+Faça o download do instalador: Acesse o site oficial do MySQL e faça o download do instalador para Windows. 
 
 Execute o instalador: Dê um duplo clique no arquivo baixado e execute o instalador. Siga as instruções na tela para completar a instalação.
 
 Configuração do servidor: Durante o processo de instalação, você será solicitado a definir uma senha para o usuário root do MySQL e a configurar o servidor. Siga as instruções para definir as opções que deseja.
 
 Verifique a instalação: Após a instalação, abra o prompt de comando e execute o comando abaixo para verificar se o MySQL está instalado corretamente.
+
 ```
 mysql --version
-
 ```
-Linux (Ubuntu)
+##Linux (Ubuntu)
 
 Atualize o gerenciador de pacotes: Abra o terminal e execute o comando abaixo para atualizar o gerenciador de pacotes.
-
+```
 sudo apt update
-Instale o MySQL: Execute o comando abaixo para instalar o MySQL.
+````
 
+Instale o MySQL: Execute o comando abaixo para instalar o MySQL.
+```
 sudo apt install mysql-server
+```
+
 Configuração do servidor: Durante a instalação, você será solicitado a definir uma senha para o usuário root do MySQL e a configurar o servidor. Siga as instruções para definir as opções que deseja.
 
 Verifique a instalação: Após a instalação, execute o comando abaixo para verificar se o MySQL está instalado corretamente.
-
+```
 mysql --version
-macOS
+```
+
+##macOS
 
 Faça o download do instalador: Acesse o site oficial do MySQL e faça o download do instalador para macOS. Download for macOS.
 
@@ -90,64 +99,66 @@ Configuração do servidor: Durante o processo de instalação, você será soli
 
 Verifique a instalação: Após a instalação, abra o terminal e execute o comando abaixo para verificar se o MySQL está instalado corretamente.
 
+```
 mysql --version
+```
+
 Com a instalação concluída, execute o script deste repositorio no banco de dados para criar o banco de dados e sua tabela de produtos. Script link.
 
-Instalação da aplicação
+#Instalação da aplicação
 
-Instale o Anaconda: Baixe e instale o Anaconda a partir do site oficial. Link: Anaconda Download.
+##Instale o Anaconda: Baixe e instale o Anaconda a partir do site oficial. Link: Anaconda Download.
 
 Faça o download do repositorio em um caminho de sua preferência.
-
+```
 git clone https://github.com/phelipegomes/CondoStockAPI.git
+```
+
 Crie um ambiente virtual: Abra o terminal ou prompt de comando e crie um ambiente virtual usando o Anaconda com o comando abaixo.
-
+```
 conda create --name myenv
+```
+
 Ative o ambiente virtual: Ative o ambiente virtual com o comando abaixo.
-
+```
 conda activate myenv
+```
 Instale o FastAPI: Instale o FastAPI com o comando abaixo.
-
+```
 pip install fastapi
+```
+
 Instale o SQLAlchemy: Instale o SQLAlchemy com o comando abaixo.
-
+```
 pip install sqlalchemy
+```
+
 Instale o PyMySQL: Instale o PyMySQL com o comando abaixo.
-
+```
 pip install PyMySQL
-Instale o Uvicorn: Instale o Uvicorn com o comando abaixo.
+```
 
+Instale o Uvicorn: Instale o Uvicorn com o comando abaixo.
+```
 pip install uvicorn
+```
+
 Configure o banco de dados: No arquivo db.py que esta na pasta config da aplicação, altere somente os parametros YOUR_USER e YOUR_PASSWORD com suas respectivas credenciais configuradas na instalação inicial do mysql.
 
 Exemplo:
-
+```
 db = Database("mysql+pymysql", "YOUR_USER", "YOUR_PASSWORD", "127.0.0.1:3306", "inventorydb")
+```
+
 Execute o servidor: Inicie o servidor usando o Uvicorn com o seguinte comando no terminal.
+```
 uvicorn app:app --reload
+```
+
 Teste a API: Agora a API está pronta para ser testada. Abra o navegador e acesse o endereço http://localhost:8000/docs para abrir a documentação gerada automaticamente pelo FastAPI. Você pode testar os endpoints diretamente na documentação ou usando um software como o Postman.
-Tecnologias utilizadas
 
-Badge Badge Badge Badge Badge Badge
+#Conclusão
 
-Conclusão
+CondoStockAPI é uma REST API desenvolvida com FastAPI, que usa a classe de rotas para criar endpoints. O banco de dados é gerenciado por PyMySQL e sqlalchemy. A API é configurada para controlar os produtos por meio do endpoint /products, que oferece rotas para incluir, buscar, atualizar e excluir produtos. 
 
-Python é uma linguagem de programação de alto nível e multiplataforma que é amplamente utilizada para desenvolvimento de software, aprendizado de máquina, automação de processos e outras aplicações.
-
-FastAPI é um framework moderno para construção de APIs em Python que permite criar APIs de forma rápida e fácil, com suporte para recursos como autenticação, validação de dados e documentação automática.
-
-SQLAlchemy é uma biblioteca de mapeamento objeto-relacional em Python que fornece uma maneira conveniente de se trabalhar com bancos de dados relacionais.
-
-Anaconda é uma distribuição de Python e R que inclui uma série de ferramentas e bibliotecas para ciência de dados e análise numérica.
-
-PyMySQL é uma biblioteca Python que fornece um conector para bancos de dados MySQL.
-
-MySQL é um sistema de gerenciamento de banco de dados relacional (RDBMS) que é amplamente utilizado em aplicativos web e outras aplicações.
-
-Uvicorn é um servidor web ASGI de alto desempenho que pode ser usado para executar aplicativos web Python.
-
-Para instalar o MySQL no Windows, é necessário baixar o instalador do site oficial, executá-lo e seguir as instruções na tela para configurar o servidor.
-
-Para instalar o MySQL no Linux (Ubuntu), é necessário atualizar o gerenciador de pacotes e, em seguida, instalar o MySQL usando o comando apropriado.
-
-Para instalar o MySQL no macOS, é necessário baixar o instalador do site oficial, executá-lo e seguir as instruções na tela para configurar o servidor.
+O projeto está em desenvolvimento e, em breve, haverá um pallet de testes e autenticação com token JWT. O MySQL é o banco de dados recomendado e um script é fornecido para criar o banco de dados e sua tabela de produtos. Para instalar a aplicação, é necessário instalar o Anaconda e criar um ambiente virtual.
