@@ -106,8 +106,12 @@ mysql --version
 Com a instalação concluída, execute o script deste repositorio no banco de dados para criar o banco de dados e sua tabela de produtos. Script link.
 
 # Instalação da aplicação
+Instale os pacotes necessários: Instale os pacotes com o comando abaixo.
+```
+pip installfastapi sqlalchemy pymysql uvicorn 
+```
 
-## Instale o Anaconda: Baixe e instale o Anaconda a partir do site oficial. Link: Anaconda Download.
+Instale o Anaconda: Baixe e instale o Anaconda a partir do site oficial.
 
 Faça o download do repositorio em um caminho de sua preferência.
 ```
@@ -122,25 +126,6 @@ conda create --name myenv
 Ative o ambiente virtual: Ative o ambiente virtual com o comando abaixo.
 ```
 conda activate myenv
-```
-Instale o FastAPI: Instale o FastAPI com o comando abaixo.
-```
-pip install fastapi
-```
-
-Instale o SQLAlchemy: Instale o SQLAlchemy com o comando abaixo.
-```
-pip install sqlalchemy
-```
-
-Instale o PyMySQL: Instale o PyMySQL com o comando abaixo.
-```
-pip install PyMySQL
-```
-
-Instale o Uvicorn: Instale o Uvicorn com o comando abaixo.
-```
-pip install uvicorn
 ```
 
 Configure o banco de dados: No arquivo db.py que esta na pasta config da aplicação, altere somente os parametros YOUR_USER e YOUR_PASSWORD com suas respectivas credenciais configuradas na instalação inicial do mysql.
