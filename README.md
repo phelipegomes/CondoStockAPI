@@ -160,7 +160,7 @@ Crie um banco de dados novo com o nome 'tests' e execute o seguinte script:
 
 ```
 CREATE TABLE products(
-  id INT NOTE NULL AUTO_INCREMENT, 
+  id INT NOT NULL AUTO_INCREMENT, 
   name VARCHAR(255), 
   description VARCHAR(255), 
   price VARCHAR(255), 
