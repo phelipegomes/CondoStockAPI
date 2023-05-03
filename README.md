@@ -1,6 +1,6 @@
 CondoStockAPI - REST API padrão MVC usando FastAPI
 
-#Índice
+# Índice
 
 * [Descrição do Projeto] (descricao-do-projeto)
 * [Rotas Disponíveis] (rotas-disponiveis)
@@ -9,7 +9,7 @@ CondoStockAPI - REST API padrão MVC usando FastAPI
 * [Conclusão] (conclusao)
 
 
-#Descrição do projeto
+# Descrição do projeto
 
 Esta aplicação trata-se de uma API desenvolvida utilizando o framework FastAPI, onde é importado funcionalidades que agilizam o processo de criação de ending-points usando a classe de rotas.
 
@@ -17,7 +17,7 @@ As querys são controladas pela biblioteca do python mysqlAlquemy e pyMySQL, aux
 
 O servidor da aplicação utiliza o package uviCorn para criar ambiente virtual e executar a aplicaçao local e Anaconda para um deploy rápido da aplicação.
 
-#Rotas disponíveis
+# Rotas disponíveis
 
 Aplicação configurada com rotas para a realização controle de produtos usando o ending-point /products:
 
@@ -53,11 +53,11 @@ Em andamento:
 --> Pallet de testes ainda em desenvolvimento 
 --> Auth com token JWT
 
-#Instalação do projeto
+# Instalação do projeto
 
 Para que a API funcione, siga os passos abaixo. Lembre-se: é necessário possuir o banco de dados mysql e executar o script em anexo para que as configuraçoes já definidas sejam lidas da forma correta. Caso contrário, siga o passo a passo de instalação do mySQL.
 
-##Windows
+## Windows
 
 Faça o download do instalador: Acesse o site oficial do MySQL e faça o download do instalador para Windows. 
 
@@ -70,7 +70,7 @@ Verifique a instalação: Após a instalação, abra o prompt de comando e execu
 ```
 mysql --version
 ```
-##Linux (Ubuntu)
+## Linux (Ubuntu)
 
 Atualize o gerenciador de pacotes: Abra o terminal e execute o comando abaixo para atualizar o gerenciador de pacotes.
 ```
@@ -89,7 +89,7 @@ Verifique a instalação: Após a instalação, execute o comando abaixo para ve
 mysql --version
 ```
 
-##macOS
+## macOS
 
 Faça o download do instalador: Acesse o site oficial do MySQL e faça o download do instalador para macOS. Download for macOS.
 
@@ -105,9 +105,9 @@ mysql --version
 
 Com a instalação concluída, execute o script deste repositorio no banco de dados para criar o banco de dados e sua tabela de produtos. Script link.
 
-#Instalação da aplicação
+# Instalação da aplicação
 
-##Instale o Anaconda: Baixe e instale o Anaconda a partir do site oficial. Link: Anaconda Download.
+## Instale o Anaconda: Baixe e instale o Anaconda a partir do site oficial. Link: Anaconda Download.
 
 Faça o download do repositorio em um caminho de sua preferência.
 ```
@@ -157,7 +157,7 @@ uvicorn app:app --reload
 
 Teste a API: Agora a API está pronta para ser testada. Abra o navegador e acesse o endereço http://localhost:8000/docs para abrir a documentação gerada automaticamente pelo FastAPI. Você pode testar os endpoints diretamente na documentação ou usando um software como o Postman.
 
-#Conclusão
+# Conclusão
 
 CondoStockAPI é uma REST API desenvolvida com FastAPI, que usa a classe de rotas para criar endpoints. O banco de dados é gerenciado por PyMySQL e sqlalchemy. A API é configurada para controlar os produtos por meio do endpoint /products, que oferece rotas para incluir, buscar, atualizar e excluir produtos. 
 
