@@ -1,10 +1,10 @@
 # Índice
 
-* [Descrição do Projeto](#descricao-do-projeto)
-* [Rotas Disponíveis](#rotas-disponiveis)
-* [Instalação do projeto](#instalacao-do-projeto)
+* [Descrição do Projeto](#Descrição-do-Projeto)
+* [Rotas Disponíveis](#Rotas-Disponíveis)
+* [Instalação do projeto](#Instalação-do-Projeto)
 * [Instalação da aplicação](#instalacao-da-aplicacao)
-* [Testes](#testes)
+* [Testes](#Testes)
 * [Conclusão](#Conclusão)
 
 # Descrição do Projeto
