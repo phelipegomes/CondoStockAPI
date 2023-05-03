@@ -3,7 +3,7 @@
 * [Descrição do Projeto](#Descrição-do-Projeto)
 * [Rotas Disponíveis](#Rotas-Disponíveis)
 * [Instalação do projeto](#Instalação-do-Projeto)
-* [Instalação da aplicação](#instalacao-da-aplicacao)
+* [Instalação da aplicação](#Instalação-da-aplicação)
 * [Testes](#Testes)
 * [Conclusão](#Conclusão)
 
