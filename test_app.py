@@ -26,7 +26,7 @@ def test_get_product():
     last_id = client.get("/products").json()[-1]['id']
     # Test value returned
     print(last_id)
-    # Finally, test the get_product route
+    # Finally, test the get_product routes
     response = client.get(f"/products/{last_id}")
     assert response.status_code == 200
 
