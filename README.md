@@ -9,7 +9,7 @@ CondoStockAPI - REST API padrão MVC usando FastAPI
 * [Conclusão] (#conclusao)
 
 
-# Descrição do projeto
+# Descrição do Projeto
 
 Esta aplicação trata-se de uma API desenvolvida utilizando o framework FastAPI, onde é importado funcionalidades que agilizam o processo de criação de ending-points usando a classe de rotas.
 
@@ -17,7 +17,7 @@ As querys são controladas pela biblioteca do python mysqlAlquemy e pyMySQL, aux
 
 O servidor da aplicação utiliza o package uviCorn para criar ambiente virtual e executar a aplicaçao local e Anaconda para um deploy rápido da aplicação.
 
-# Rotas disponíveis
+# Rotas Disponíveis
 
 Aplicação configurada com rotas para a realização controle de produtos usando o ending-point /products:
 
@@ -53,7 +53,7 @@ Em andamento:
 --> Pallet de testes ainda em desenvolvimento 
 --> Auth com token JWT
 
-# Instalação do projeto
+# Instalação do Projeto
 
 Para que a API funcione, siga os passos abaixo. Lembre-se: é necessário possuir o banco de dados mysql e executar o script em anexo para que as configuraçoes já definidas sejam lidas da forma correta. Caso contrário, siga o passo a passo de instalação do mySQL.
 
