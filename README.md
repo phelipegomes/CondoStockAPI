@@ -107,7 +107,7 @@ Com a instalação concluída, execute o script deste repositorio no banco de da
 # Instalação da aplicação
 Instale os pacotes necessários: Instale os pacotes com o comando abaixo.
 ```
-pip installfastapi sqlalchemy pymysql uvicorn 
+pip install fastapi sqlalchemy pymysql uvicorn 
 ```
 
 Instale o Anaconda: Baixe e instale o Anaconda a partir do site oficial.
