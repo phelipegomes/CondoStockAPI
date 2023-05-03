@@ -67,6 +67,7 @@ Verifique a instalação: Após a instalação, abra o prompt de comando e execu
 ```
 mysql --version
 ```
+
 ## Linux (Ubuntu)
 
 Atualize o gerenciador de pacotes: Abra o terminal e execute o comando abaixo para atualizar o gerenciador de pacotes.
