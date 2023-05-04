@@ -2,9 +2,6 @@ from fastapi import APIRouter, Response, status, HTTPException
 from config.db import conn
 from models.products import products
 from schemas.product import Product
-from tools.handlers import Handlers
-
-flag = Handlers()
 
 route_product = APIRouter()
 
@@ -36,23 +33,21 @@ def get_products():
 # Route to search products by ID
 @route_product.get('/products/{id}', tags=["Search products by ID"])
 def get_product(id: int):
-    # Check if product exists
-
-    # if flag.select(conn, products):
-    #     raise HTTPException(status_code=404, detail="Item not found")
-
-     # Getting the product by ID of the database
+    
+    # Getting the product by ID of the database
     result = conn.execute(products.select().where(
         products.c.id == id)).first()
+    
+    if(not result):
+        raise HTTPException(status_code=404, detail="Item not found")   
     return result
 
 # Route to update a product property by ID
 @route_product.put('/products/{id}', tags=["Products"])
 def update_product(id: int, product: Product):
     # Check if product already exists
-
-    # if flag.select(conn, products):
-    #     raise HTTPException(status_code=404, detail="Item not found")
+    if(not get_product(id)):
+        raise HTTPException(status_code=404, detail="Item not found")   
 
     # Updating the product of the database
     result = conn.execute(products.update().values(
@@ -65,14 +60,12 @@ def update_product(id: int, product: Product):
     # Commiting changes
     conn.commit()
 
-
 #Route to delete product by ID
 @route_product.delete('/products/{id}', tags=["Products"])
 def delete_product(id: int):
     # Check if item already exists
-    
-    # if flag.select(conn, products):
-    #     raise HTTPException(status_code=404, detail="Item not found")
+    if(not get_product(id)):
+        raise HTTPException(status_code=404, detail="Item not found")  
 
     # Deleting the product of the database
     old_properties = conn.execute(
