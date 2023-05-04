@@ -24,8 +24,6 @@ def test_get_product():
     client.post("/products", json=product)
     # Then, get the id of the last inserted product
     last_id = client.get("/products").json()[-1]['id']
-    # Test value returned
-    print(last_id)
     # Finally, test the get_product routes
     response = client.get(f"/products/{last_id}")
     assert response.status_code == 200

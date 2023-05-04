@@ -37,8 +37,9 @@ def get_products():
 @route_product.get('/products/{id}', tags=["Search products by ID"])
 def get_product(id: int):
     # Check if product exists
-    if flag.select(conn, products):
-        raise HTTPException(status_code=404, detail="Item not found")
+
+    # if flag.select(conn, products):
+    #     raise HTTPException(status_code=404, detail="Item not found")
 
      # Getting the product by ID of the database
     result = conn.execute(products.select().where(
@@ -49,8 +50,9 @@ def get_product(id: int):
 @route_product.put('/products/{id}', tags=["Products"])
 def update_product(id: int, product: Product):
     # Check if product already exists
-    if flag.select(conn, products):
-        raise HTTPException(status_code=404, detail="Item not found")
+
+    # if flag.select(conn, products):
+    #     raise HTTPException(status_code=404, detail="Item not found")
 
     # Updating the product of the database
     result = conn.execute(products.update().values(
@@ -68,8 +70,9 @@ def update_product(id: int, product: Product):
 @route_product.delete('/products/{id}', tags=["Products"])
 def delete_product(id: int):
     # Check if item already exists
-    if flag.select(conn, products):
-        raise HTTPException(status_code=404, detail="Item not found")
+    
+    # if flag.select(conn, products):
+    #     raise HTTPException(status_code=404, detail="Item not found")
 
     # Deleting the product of the database
     old_properties = conn.execute(
