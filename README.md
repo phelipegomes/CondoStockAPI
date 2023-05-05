@@ -50,7 +50,6 @@ A tabela principal do banco de dados "inventorydb" que será utilizado no projet
 ```
 Em andamento: 
 
---> Pallet de testes ainda em desenvolvimento </br>
 --> Auth com token JWT
 
 # Instalação do Projeto
